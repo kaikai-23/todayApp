@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>TODAY</h1>
+    </header>
+    <div class="container">
+        <script>
+            var Today = new Date();
+            //下のdocumentもあらかじめインスタンス化してくれてるもの
+            //var newYear = new Data(2022,1,1);のようにパラメーターを変えることで性格を変えられる
+            //オブジェクトによってはインスタンス化しなくても使用できるものもある
+            //getmonthは1月を0としているため注意が必要
+            var todayHtml = Today.getFullYear() + '/' + (Today.getMonth() + 1) + '/' + Today
+                .getDate();
+            document.write('<p class="date">' + todayHtml + '</p>');
+        </script>
+    </div>
+</body>
+
+</html>
